@@ -1,0 +1,42 @@
+.tp{
+    margin:35px;
+}
+.input-group .form-control{
+    border-top: 1px solid #ccc;
+    width: 600px;
+    background-color: #fff;
+ }
+
+ .input-group-addon {
+    padding: 0.370rem 1.75rem;
+    margin-top: 3px;    
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.;
+    color: #f8f9fa;
+    background-color: #c7bea4;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+.bgclrblue{
+    background-color:  rgb(55,72,170);
+}
+container{
+    background-color:  rgb(55,72,170);
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+    margin-top: 1.75rem;
+}
+ /* body{
+     background-color: black;
+ } */
+ a{
+font-size: 0.8em;
+text-align: center;
+
+  }
+ 

@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+        <div class="card"  >
+            <div class="card-body">
+      <form #myForm="ngForm"  (ngSubmit)=register(myForm) novalidate>
+          <div class="form-group">
+              <!-- <label for="exampleInputEmail1">Name :</label> -->
+              <input type="email" class="form-control" placeholder="Full Name" required
+                     name="name" #name="ngModel" minlength="3" ngModel>
+              <div *ngIf="name.errors && (name.dirty || name.touched)">
+                 <p [ngbTooltip]="tipContent" *ngIf="name.errors.required">
+                    <small style="color:brown" >Please Enter Full Name </small> 
+                 </p>
+              </div>
+           </div>
+
+        <div class="form-group">
+           <input type="email" class="form-control form-control-success"  placeholder="Email" required
+          name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email="ngModel" ngModel>
+         </div>
+         <div class="form-group">
+             <input type="email" class="form-control" placeholder="Mobile Number" required
+            name="mobile" ngModel>
+           </div>
+        <div class="form-group">
+           <input type="password" class="form-control" placeholder="Password" required
+          name="password" ngModel>
+        </div>
+        <div class="form-group">
+           <input type="password" class="form-control" placeholder="Confirm Password" required
+           name="comfirmpassword"
+           ngModel>
+        </div>
+     <br>
+        <mat-radio-group  name="optradio" class="optpddng"  ngModel ngDefaultControl required>
+            <mat-radio-button  value="agent"  >Agent</mat-radio-button> &nbsp;&nbsp;&nbsp;
+            <mat-radio-button  value="owner"  >Owner</mat-radio-button> &nbsp;&nbsp;&nbsp;
+            <mat-radio-button  value="builder" >Builder</mat-radio-button>
+            
+          </mat-radio-group>
+        <br>
+        <br>
+        <div>
+            <!-- (click)=register(myForm) -->
+            <button type="submit" [disabled]="myForm.invalid"  style="width:-webkit-fill-available;" class="btn btn-primary">Submit</button>          
+        </div>
+          <p > Already have an account ? </p>
+          
+
+          <div style="padding-left: 59px;">
+              <div class="top-nav__auth " style="width: 80%; height: 18px; border-bottom: 1px solid rgb(162, 156, 156); text-align: center">
+                  <span>or</span> 
+              </div>
+           </div>
+<br>
+          <div>
+            <small>             Sign in using
+              </small> <br>
+            <button class="btn btn-facebook">
+              <i class="fa fa-facebook"></i>
+            </button>
+            <button class="btn btn-gplus">
+              <i class="fa fa-google-plus"></i>
+            </button>
+            <button class="btn btn-linkedin">
+              <i class="fa fa-linkedin"></i>
+            </button>
+            
+          </div>
+      </form>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>  
+
+
+  

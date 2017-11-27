@@ -1,0 +1,10 @@
+/* .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0rem;
+} */
+.CardImages{
+    margin-left: -18px;
+    margin-right: -18px;
+    padding-bottom: calc(((2 * ((25% - 0.5px) * 1)) + 0px) + 1px);
+}

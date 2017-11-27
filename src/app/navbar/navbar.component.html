@@ -1,0 +1,120 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-expand-sm">
+  <!-- <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt=""></a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item  ">
+      <a class="nav-link" style="color: white;"  (click)="open1(content1)" >Register <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item" style="float:right;">
+      <a class="nav-link" style="color: white;" (click)="open(content)" >Login</a>
+    </li>
+    <!-- <li class="nav-item" style="float:right;">
+        <a class="nav-link" [routerLink]="['topproperty']" >Top Property</a>
+      </li>  
+      <li class="nav-item" style="float:right;">
+        <a class="nav-link" [routerLink]="['detailproperty']" >DetailProperty</a>
+      </li>     -->
+  </ul>     
+</div>
+</nav>
+
+<div class="subnav">
+<ul class="nav justify-content-center midd ">
+   <li class="nav-item">
+        <a class="nav-link" routerLink='/home'>HOME</a>
+        <div class="dropdown-content">
+            <a href="#">After Login</a>
+            <a href="#">Home Alternative</a>
+            <a href="#">Dashboard</a>
+          </div>
+      </li>
+  
+      <li class="nav-item">
+        <a class="nav-link" routerLink='submitproperty' >LISTING</a>
+        <div class="dropdown-content">
+            <a href="#">Grid View</a>
+            <a href="#">List View</a>
+            <a href="#">Map View</a>
+            <a href="#">Listing Detail</a>          
+          </div>
+      </li>
+  
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['addproperty']">SUBMIT</a>
+      </li>
+  
+      <li class="nav-item">
+        <a class="nav-link " href="#">MORTGAGES </a>
+        <div class="dropdown-content">
+            <a href="#">Mortgage Review</a>
+            <a href="#">Mortgage Detail</a>
+            <a href="#">Mortgage Disclaimer</a>
+           </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['agents']">AGENTS</a>
+        <div class="dropdown-content">
+            <a [routerLink]="['agentdetail']">Agent Detail</a>
+            <a href="#">Agent Property</a>
+            <a href="#">Agent Reviwes</a>
+           </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CONTACTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#">MORE </a>
+        <div class="dropdown-content">
+            <a href="#">Profile Private</a>
+            <a href="#">Profile Public</a>
+            <a href="#">Blog</a>
+            <a href="#">FAQ</a>
+            <a href="#">Team</a>
+           </div>
+      </li>
+  
+    </ul>
+  </div>
+
+<!-- login Model -->
+  <ng-template class="bgimg" #content let-c="close" let-d="dismiss" style="background-color:#e9e4e4;">
+      <div class="modal-header">
+        <h4 class="modal-title"  style="margin-left:28%;">Login With Codekul</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="margin-left:44px;">
+          <app-login></app-login>
+          <br>
+          <button mat-raised-button color="primary" (click)="c('Close click')" style="margin-left: 30%; background-color:#2262ce"> Close</button>
+     </div>
+  </ng-template>
+<!-- login Model End-->
+  
+
+<!-- Register Model -->
+<ng-template #content1 let-c1="close" let-d1="dismiss" style="background-color:#e9e4e4;">
+    <div class="modal-header">
+      <h4 class="modal-title"  style="margin-left:28%;">Sign Up With Codekul</h4>
+      <button type="button" class="close1" aria-label="Close1" (click)="c1('Close click')" style="background-color: white; border: white;">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" style="margin-left:44px;">
+        <app-register></app-register>
+        <br>
+        <button mat-raised-button color="primary" (click)="c1('Close click')" style="margin-left: 30%; background-color:#2262ce"> Close</button>
+   </div>
+</ng-template>
+<!-- Register Model here -->
+
+    
+
+
+
+
